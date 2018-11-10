@@ -49,3 +49,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 DEVICE_RESOLUTION := 720x1280
 TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1280
+
+# TWRP
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_DEVICE_VERSION ?= $(shell date -u +"%Y%m%d")
+
