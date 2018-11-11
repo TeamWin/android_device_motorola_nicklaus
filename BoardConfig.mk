@@ -25,7 +25,7 @@ TARGET_CPU_VARIANT := cortex-a53
 TARGET_BOARD_PLATFORM := mt6737m
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := mt6737m
+TARGET_BOOTLOADER_BOARD_NAME := mt6735
 TARGET_NO_BOOTLOADER := true
 
 # Filesystems
@@ -42,21 +42,10 @@ BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,32N2 androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0xE000000
 KERNEL_TOOLCHAIN_PREFIX := arm-linux-androidkernel-
 
-# Recovery
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-
 # Storage Allocations
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-# TWRP
-RECOVERY_VARIANT := twrp
-TW_THEME := portrait_hdpi
-TW_DEVICE_VERSION := Moto E4 Plus
-# TW_DEVICE_VERSION := $(shell date -u +"%Y%m%d_%H%M")
-TW_ALWAYS_RMRF := true
-TW_INCLUDE_CRYPTO := true
-TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
-TW_INCLUDE_FUSE_EXFAT := true # exFAT FS Support
-TW_INCLUDE_FUSE_NTFS := true  # NTFS Support
-TW_INCLUDE_NTFS_3G := true
+DEVICE_RESOLUTION := 720x1280
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1280
